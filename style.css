@@ -1,0 +1,357 @@
+/* inspired by https: //www.peggy.com/ */
+/* inspired by https://daveholloway.uk/ */
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+
+/* Set core body defaults */
+body {
+    font-size: 100%;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: #0c3857;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Make images easier to work with */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Default margins */
+p {
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-bottom: 20px;
+}
+
+/* Anchor link default styles */
+a {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline;
+    background-image: linear-gradient(to right, #FFA857, #FF46AF);
+    text-decoration: none;
+}
+
+a:hover {
+    background-image: linear-gradient(to right, #D76D63, #CE3147);
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Blockquote default styles */
+blockquote {
+    background-color: #f4f0ff;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+blockquote p:last-child {
+    margin: 0;
+}
+
+/* Skip link hidden but selectable */
+.skip-link {
+    position: absolute;
+    top: auto;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    background-color: var(--color-secondary);
+    color: #fff;
+    font-size: 1.125rem;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 0.5em;
+}
+
+/* header content */
+header {
+    text-align: center;
+}
+
+/* background from https://www.youtube.com/watch?v=k3WkJq478To */
+header .container h1 {
+    font-size: 8rem;
+    height: 101vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/img/back-vid.gif');
+    font-family: 'Honk', serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: blink 4s infinite alternate;
+    border-bottom: 3px solid rgba(22, 182, 212, 1);
+    box-shadow: 0 0 10px rgba(113, 213, 255, 0.3),
+        0 0 20px rgba(113, 213, 255, 0.3),
+        0 0 40px rgba(113, 213, 255, 0.3),
+        0 0 80px rgba(113, 213, 255, 0.3),
+        0 0 160px rgba(113, 213, 255, 0.3),
+        0 0 320px rgba(113, 213, 255, 0.3);
+}
+
+header .container h2 {
+    margin-top: 100px;
+}
+
+header .container h2,
+header .container p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+
+/* vapour wave borders from https://codepen.io/iamdoomling/pen/NWGJNNv */
+header .container .link-github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7c9f3;
+    box-shadow: 0px 0px 0px 1px #110038;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #997d97;
+    border-left: 1px solid #997d97;
+    padding: 5px 0px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-image: initial;
+    color: initial;
+    background-clip: inherit;
+    font-family: 'Honk', serif;
+    font-size: 1.5rem;
+}
+
+header .container .link-github:hover {
+    background-color: #e6bbe2;
+}
+
+header .container .link-github span {
+    fill: yellow;
+    display: flex;
+    margin-right: 5px;
+    width: 20px;
+}
+
+/* inspiration from https: //codepen.io/knexx/pen/jOybzaQ */
+@keyframes blink {
+
+    0% {
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow: 0 0 50px #f205af4d,
+            0 0 100px #f205af4d,
+            0 0 120px #f205af4d,
+            0 0 150px #f205af4d;
+    }
+}
+
+/* nav content */
+nav {
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 60rem;
+    background-color: white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin: 110px auto 0 auto;
+    border-bottom: solid 10px #f4f4f4;
+}
+
+nav ul a {
+    background-image: initial;
+    color: initial;
+    background-clip: inherit;
+    color: #939393;
+    transition: all 0.3s ease-in-out;
+    font-weight: 400;
+}
+
+nav ul a:hover {
+    color: black;
+    background-image: initial;
+}
+
+/* main content */
+main article#about .container:first-child {
+    margin-top: 0;
+}
+
+main article .container,
+aside .container {
+    max-width: 60rem;
+    background-color: white;
+    margin: 10px auto 0 auto;
+    padding: 3rem 2rem;
+}
+
+main article .container h2,
+aside .container h4,
+aside .container h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+}
+
+main article .container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+main article .container ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+
+main article .container ul li {
+    background-color: #f4f0ff;
+    padding: 5px 10px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+main article .container ol {
+    list-style: decimal inside;
+    line-height: 190%;
+}
+
+main article#contribute .container:not(:first-child),
+main article#contribute .container:last-child {
+    margin-top: -50px;
+}
+
+/* file download footer */
+footer#files .container a {
+    background-color: #f7c9f3;
+    box-shadow: 0px 0px 0px 1px #110038;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #997d97;
+    border-left: 1px solid #997d97;
+    padding: 5px 10px;
+    background-image: initial;
+    color: initial;
+    background-clip: inherit;
+    font-family: 'Honk', serif;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    text-wrap: nowrap;
+}
+
+footer#files .container a:hover {
+    background-color: #e6bbe2;
+}
+
+footer#files .container a.link-codepen {
+    margin-left: 30px;
+}
+
+/* footer */
+.page-footer {
+    max-width: 60rem;
+    background-color: white;
+    margin: 10px auto 0 auto;
+    padding: 2rem 2rem;
+}
+
+.page-footer p {
+    font-size: 14px;
+    color: #8c8c8c;
+}
+
+.page-footer ul {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.page-footer ul li a {
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.page-footer .link-github svg {
+    fill: #ffc593;
+    width: 10px;
+}
+
+
+
+
+/* media queries */
+@media screen and (max-width: 850px) {
+    header .container h1 {
+        font-size: 3rem;
+        height: 50vh;
+    }
+
+    header .container h2 {
+        margin-top: 50px;
+    }
+
+    header .container h2,
+    header .container p {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        font-size: 0.7rem;
+    }
+
+    footer#files .container a {
+        margin: 0;
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    footer#files .container a.link-codepen {
+        margin-left: 0;
+    }
+
+    .page-footer ul {
+        flex-direction: column;
+    }
+
+}
