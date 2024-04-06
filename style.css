@@ -105,7 +105,7 @@ header .container h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/img/back-vid.gif');
+    background-image: url('./img/back-vid.gif');
     font-family: 'Honk', serif;
     background-size: cover;
     background-repeat: no-repeat;
