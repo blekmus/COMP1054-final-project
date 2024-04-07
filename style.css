@@ -9,6 +9,7 @@
 html {
     overflow-x: hidden;
     background-color: #f4f4f4;
+    scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
@@ -107,7 +108,7 @@ header .container h1 {
     background-image: url('./img/back-vid.gif');
     font-family: 'Honk', serif;
     background-size: cover;
-    background-color: pink;
+    background-color: black;
     background-repeat: no-repeat;
     background-position: center;
     animation: blink 4s infinite alternate;
