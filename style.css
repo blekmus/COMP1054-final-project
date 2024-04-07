@@ -1,6 +1,5 @@
-/* inspired by https: //www.peggy.com/ */
+/* inspired by https://www.peggy.com/ */
 /* inspired by https://daveholloway.uk/ */
-
 
 *,
 *::before,
@@ -99,6 +98,7 @@ header {
 }
 
 /* background from https://www.youtube.com/watch?v=k3WkJq478To */
+/* extracted first 5 seconds then converted to gif */
 header .container h1 {
     font-size: 8rem;
     height: 101vh;
@@ -108,16 +108,31 @@ header .container h1 {
     background-image: url('./img/back-vid.gif');
     font-family: 'Honk', serif;
     background-size: cover;
+    background-color: pink;
     background-repeat: no-repeat;
     background-position: center;
     animation: blink 4s infinite alternate;
     border-bottom: 3px solid rgba(22, 182, 212, 1);
-    box-shadow: 0 0 10px rgba(113, 213, 255, 0.3),
+    box-shadow: 0 0 5px rgba(113, 213, 255, 0.3),
+        0 0 10px rgba(113, 213, 255, 0.3),
+        0 0 15px rgba(113, 213, 255, 0.3),
         0 0 20px rgba(113, 213, 255, 0.3),
-        0 0 40px rgba(113, 213, 255, 0.3),
-        0 0 80px rgba(113, 213, 255, 0.3),
-        0 0 160px rgba(113, 213, 255, 0.3),
-        0 0 320px rgba(113, 213, 255, 0.3);
+        0 0 25px rgba(113, 213, 255, 0.3);
+}
+
+/* inspiration from https://codepen.io/knexx/pen/jOybzaQ */
+@keyframes blink {
+
+    0% {
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow: 0 0 50px #f205afc4,
+            0 0 100px #f205afc4,
+            0 0 120px #f205afc4,
+            0 0 150px #f205afc4;
+    }
 }
 
 header .container h2 {
@@ -163,21 +178,6 @@ header .container .link-github span {
     display: flex;
     margin-right: 5px;
     width: 20px;
-}
-
-/* inspiration from https: //codepen.io/knexx/pen/jOybzaQ */
-@keyframes blink {
-
-    0% {
-        text-shadow: none;
-    }
-
-    100% {
-        text-shadow: 0 0 50px #f205af4d,
-            0 0 100px #f205af4d,
-            0 0 120px #f205af4d,
-            0 0 150px #f205af4d;
-    }
 }
 
 /* nav content */
@@ -262,6 +262,10 @@ main article#contribute .container:last-child {
     margin-top: -50px;
 }
 
+main article#guidelines h3 {
+    margin-top: 50px;
+}
+
 /* file download footer */
 footer#files .container a {
     background-color: #f7c9f3;
@@ -294,6 +298,7 @@ footer#files .container a.link-codepen {
     background-color: white;
     margin: 10px auto 0 auto;
     padding: 2rem 2rem;
+    padding-bottom: 0.5rem
 }
 
 .page-footer p {
@@ -317,9 +322,7 @@ footer#files .container a.link-codepen {
 }
 
 
-
-
-/* media queries */
+/* media queries for mobile view */
 @media screen and (max-width: 850px) {
     header .container h1 {
         font-size: 3rem;
