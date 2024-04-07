@@ -281,7 +281,7 @@ footer#files .container a {
     font-family: 'Honk', serif;
     font-size: 1.5rem;
     margin-right: 10px;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 footer#files .container a:hover {
