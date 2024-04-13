@@ -1,6 +1,6 @@
 # Vapor Stage
 
-A mixture of vaporwave aesthetics and modern minimalistic design.
+A mixture of vaporwave aesthetics and modern minimalistic design. Based on [Style Stage](https://stylestage.dev/).
 
 ## Previews
 
