@@ -1,11 +1,11 @@
-/* inspired by https://daveholloway.uk/ */
-
+/* root styles */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* html styles */
 html {
     overflow-x: hidden;
     background-color: #f4f4f4;
@@ -70,26 +70,29 @@ blockquote p:last-child {
     margin: 0;
 }
 
-/* Skip link hidden but selectable */
+/* Skip link hidden, only displays when focused */
 .skip-link {
     position: absolute;
     top: auto;
     left: -10000px;
     width: 1px;
     height: 1px;
-    background-color: var(--color-secondary);
-    color: #fff;
-    font-size: 1.125rem;
+    color: pink;
+    font-size: 1rem;
     overflow: hidden;
+    z-index: 10;
+    border: solid 1px pink;
+    background-clip: initial;
+    background-image: initial;
 }
 
 .skip-link:focus {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 10px;
+    left: 5px;
     width: auto;
     height: auto;
-    padding: 0.5em;
+    padding: 10px;
 }
 
 /* header content */
@@ -99,6 +102,7 @@ header {
 
 /* background from https://www.youtube.com/watch?v=k3WkJq478To */
 /* extracted first 5 seconds then converted to gif */
+/* inspired by https://daveholloway.uk/ */
 header .container h1 {
     font-size: 8rem;
     height: 101vh;
@@ -122,7 +126,6 @@ header .container h1 {
 
 /* inspiration from https://codepen.io/knexx/pen/jOybzaQ */
 @keyframes blink {
-
     0% {
         text-shadow: none;
     }
