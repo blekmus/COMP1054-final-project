@@ -2,8 +2,6 @@
 
 A mixture of vaporwave aesthetics and modern minimalistic design. Based on [Style Stage](https://stylestage.dev/). I made this for a college project.
 
-https://css-final.dinil.dev
-
 ## Previews
 
 https://github.com/blekmus/COMP1054-final-project/assets/47277246/e2f2f814-09eb-43be-bf4c-9eae54d4d685
