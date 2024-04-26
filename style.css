@@ -131,28 +131,8 @@ header .container h1 {
         0 0 20px rgba(113, 213, 255, 0.3),
         0 0 25px rgba(113, 213, 255, 0.3);
 
-
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
+    font-family: 'Honk', serif;
 }
-
-
-/* check support for nesting */
-@supports selector(& .testing) {
-    header .container {
-        h1 {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: lightblue;
-        }
-    }
-}
-
-
-
-
-
-
-
 
 
 /* inspiration from https://codepen.io/knexx/pen/jOybzaQ */
